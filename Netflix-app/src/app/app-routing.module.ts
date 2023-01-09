@@ -6,8 +6,8 @@ import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'/search',component:SearchComponent},
-  {path:'/movie/:id',component:MovieDetailsComponent}
+  {path:'search',component:SearchComponent},
+  {path:'movie/:id',component:MovieDetailsComponent}
 ];
 
 @NgModule({
