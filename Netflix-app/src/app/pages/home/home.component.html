@@ -1,5 +1,5 @@
 <!-- banner start -->
-<div class="container-fluid">
+<div class="contain-fluid">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
     <div class="carousel-inner">
       <div
@@ -40,9 +40,21 @@
 </div>
 <!-- banner end -->
 
-<div class="contain">
+<div class="contain mt-3 p-4">
+
+    <!-- trending Movies  -->
     <div class="row">
         <h5 class="text-white">Trending Movies</h5>
+        <div class="rowposter mt-3 p-2">
+            <ng-container  *ngFor="let t of trendingResult">
+                <img
+                src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+                class="d-block w-100 rowimg largeposter"
+                alt="..."
+              />
+            </ng-container>
+
+        </div>
     </div>
 </div>
 
