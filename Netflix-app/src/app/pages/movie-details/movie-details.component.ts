@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Cast, MovieDetails } from 'src/app/MovieDetailsApi';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
+
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -11,9 +13,9 @@ export class MovieDetailsComponent implements OnInit {
     private service: MovieApiServiceService,
     private router: ActivatedRoute
   ) {}
-  getMovieDetails: any;
-  getMovieVideo: any;
-  getMovieCastResult: any;
+  getMovieDetails!:MovieDetails;
+  getMovieVideo!: string;
+  getMovieCastResult!:Array<Cast>;
   ngOnInit(): void {
     let getParamId = this.router.snapshot.paramMap.get('id');
     console.log(getParamId, 'paramId');

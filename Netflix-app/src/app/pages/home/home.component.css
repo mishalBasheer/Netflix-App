@@ -1,6 +1,9 @@
 .carousel-inner {
   height: 700px;
 }
+img:hover{
+  cursor: pointer;
+}
 
 .carousel-inner .carousel-item img {
   height: 700px;
@@ -29,7 +32,6 @@
 }
 .rowimg:hover{
     transform: scale(1.09);
-    cursor: pointer;
 }
 .largeposter{
     max-height: 300px;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Home } from 'src/app/HomeApi';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,15 +9,15 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 export class HomeComponent implements OnInit {
   constructor(private service: MovieApiServiceService) {}
 
-  bannerResult: any = [];
-  trendingResult: any = [];
-  actionMovieResult: any = [];
-  adventureMovieResult: any = [];
-  animationMovieResult: any = [];
-  comedyMovieResult: any = [];
-  documentaryMovieResult: any = [];
-  sciencefictionMovieResult: any = [];
-  thrillerMovieResult: any = [];
+  bannerResult: Array<Home> = [];
+  trendingResult: Array<Home> = [];
+  actionMovieResult: Array<Home> = [];
+  adventureMovieResult: Array<Home> = [];
+  animationMovieResult: Array<Home> = [];
+  comedyMovieResult: Array<Home> = [];
+  documentaryMovieResult: Array<Home> = [];
+  sciencefictionMovieResult: Array<Home> = [];
+  thrillerMovieResult: Array<Home> = [];
 
   ngOnInit(): void {
     this.bannerData();

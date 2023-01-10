@@ -10,6 +10,7 @@
         <img
           src="https://image.tmdb.org/t/p/original/{{ b.backdrop_path }}"
           class="d-block w-100"
+          [routerLink]="['/movie', b.id]"
           alt="..."
         />
         <div class="carousel-caption d-none d-md-block">
@@ -41,7 +42,7 @@
 <!-- banner end -->
 
 <div class="contain mt-3 p-4">
-  
+
   <!-- trending Movies  -->
   <div class="row">
     <h5 class="text-white">Trending Movies</h5>
