@@ -44,6 +44,6 @@ export class MovieApiServiceService {
   }
 
   getMovieCast(data:any):Observable<any>{
-    
+    return this.http.get(`${this.baseUrl}/movie/${data}/credits?api_key=${this.apikey}`)
   }
 }
