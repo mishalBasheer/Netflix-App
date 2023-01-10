@@ -25,7 +25,6 @@ export class MovieApiServiceService {
 
   // search movie 
   getSearchMovie(data: any): Observable<any> {
-    console.log(data, 'getSearch');
     return this.http.get(this.searchapi + data.movieName);
   }
 

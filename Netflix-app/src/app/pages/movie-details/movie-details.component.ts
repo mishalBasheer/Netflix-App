@@ -18,7 +18,6 @@ export class MovieDetailsComponent implements OnInit {
   getMovieCastResult!:Array<Cast>;
   ngOnInit(): void {
     let getParamId = this.router.snapshot.paramMap.get('id');
-    console.log(getParamId, 'paramId');
     this.getMovie(getParamId);
     this.getVideo(getParamId);
     this.getMovieCast(getParamId);
@@ -26,14 +25,12 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovie(id: any) {
     this.service.getMovieDetails(id).subscribe((result) => {
-      console.log(result, 'getmoviedetails');
       this.getMovieDetails = result;
     });
   }
 
   getVideo(id: any) {
     this.service.getMovieVideo(id).subscribe((result) => {
-      console.log(result, 'getMovieVideo');
       result.results.forEach((element:any)=>{
         if(element.name=='Official Trailer'){
           this.getMovieVideo=element.key;
@@ -44,7 +41,6 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovieCast(id: any) {
     this.service.getMovieCast(id).subscribe((result) => {
-      console.log(result, 'moviecast');
       this.getMovieCastResult=result.cast;
     });
   }
