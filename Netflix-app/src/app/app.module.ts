@@ -1,19 +1,18 @@
-// App Modules 
+// App Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
-// App Services 
+// App Services
 import { MovieApiServiceService } from './service/movie-api-service.service';
 
-// App Components 
+// App Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
 
 import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
@@ -31,6 +30,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
   ],
   providers: [MovieApiServiceService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
